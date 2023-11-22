@@ -1,18 +1,18 @@
-version: "3.1"
+version: "3.9"
 
 services:
   server:
     build: .
-    restart: always # What to do if container crashes
+    # restart: always # What to do if container crashes
     ports:
-      - 3000:3000
+      - ${PORT}:${PORT}
     volumes:
       - .:/server
 
-  client:
-    build: ./client
-    restart: always # What to do if container crashes
-    ports:
-      - 3001:3001
-    # volumes:
-    #   - ./client:/server/client
+  # client:
+  #   build: ./client
+  #   restart: always # What to do if container crashes
+  #   ports:
+  #     - 3001:3001
+  # volumes:
+  #   - ./client:/server/client

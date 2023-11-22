@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "bun run build && bun run build/index.js",
-    "start:dev": "bun --hot src/index.ts"
+    "start:dev": "bun --hot src/index.ts",
+    "build": "rm -rf ./build && bun build --target=bun ./src/index.ts --outdir ./build"
   }
 }

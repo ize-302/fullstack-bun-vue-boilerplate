@@ -8,13 +8,11 @@ WORKDIR /server
 COPY package.json package.json
 COPY bun.lockb bun.lockb
 
+#install dependencies
 RUN bun install
 
 # copy source code
-COPY . .
+COPY src src
 COPY tsconfig.json tsconfig.json
 
-ENV PORT=3000
-EXPOSE 3000
-
-CMD ["bun", "start:dev"]
+CMD ["bun", "start"]
