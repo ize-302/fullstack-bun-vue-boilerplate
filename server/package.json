@@ -1,0 +1,20 @@
+{
+  "name": "fullstack-bun-vue-boilerplate",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "concurrently": "^8.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.7.2",
+    "elysia": "^0.7.29"
+  },
+  "scripts": {
+    "start": "bun run build && bun run build/index.js",
+    "start:dev": "bun --hot src/index.ts"
+  }
+}
