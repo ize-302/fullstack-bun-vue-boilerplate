@@ -3,7 +3,7 @@ import { cors } from "@elysiajs/cors";
 
 const app = new Elysia()
   .use(cors())
-  .get("/", () => "Hello Elysia!")
+  .get("/", () => "Hello Elysia!!!")
   .listen(3000);
 
 console.log(

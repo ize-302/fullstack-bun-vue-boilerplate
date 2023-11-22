@@ -16,4 +16,4 @@ RUN bun run build
 
 EXPOSE 3001
 
-CMD ["bun", "preview"]
+CMD ["bun", "dev"]
