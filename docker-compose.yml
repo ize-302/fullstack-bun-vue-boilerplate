@@ -2,17 +2,19 @@ version: "3.9"
 
 services:
   server:
-    build: .
-    # restart: always # What to do if container crashes
+    build: ./server
+    restart: always # What to do if container crashes
+    container_name: server_c
     ports:
-      - ${PORT}:${PORT}
+      - "3000:3000"
     volumes:
-      - .:/server
-
-  # client:
-  #   build: ./client
-  #   restart: always # What to do if container crashes
-  #   ports:
-  #     - 3001:3001
-  # volumes:
-  #   - ./client:/server/client
+      - ./server:/app
+  client:
+    build: ./client
+    restart: always # What to do if container crashes
+    container_name: client_c
+    ports:
+      - "3001:3001"
+    # volumes:
+    # - ./client:/app
+    # stdin_open: true

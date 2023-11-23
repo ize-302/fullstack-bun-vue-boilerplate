@@ -2,7 +2,7 @@
 FROM oven/bun:latest
 
 # set workdir
-WORKDIR /server
+WORKDIR /app
 
 ## copy files
 COPY package.json package.json
@@ -15,4 +15,4 @@ RUN bun install
 COPY src src
 COPY tsconfig.json tsconfig.json
 
-CMD ["bun", "start"]
+CMD ["bun", "start:dev"]

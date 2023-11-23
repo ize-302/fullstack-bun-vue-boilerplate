@@ -1,7 +1,7 @@
 # base image
 FROM oven/bun:latest
 
-WORKDIR /client
+WORKDIR /app
 
 ## copy files
 COPY package.json .
